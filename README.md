@@ -1,0 +1,1 @@
+Curve25519 and Ed25519 compiled with [Emscripten](http://emscripten.org).

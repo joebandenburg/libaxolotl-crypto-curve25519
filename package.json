@@ -1,0 +1,29 @@
+{
+  "name": "axolotl-crypto-curve25519",
+  "version": "0.1.0",
+  "description": "emscripten compiled version of curve25519 and ed25519",
+  "main": "curve25519.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joebandenburg/libaxolotl-crypto-curve25519.git"
+  },
+  "keywords": [
+    "axolotl",
+    "crypto"
+  ],
+  "author": "Joe Bandenburg <joe@bandenburg.com>",
+  "license": "LGPLv3",
+  "bugs": {
+    "url": "https://github.com/joebandenburg/libaxolotl-crypto-curve25519/issues"
+  },
+  "homepage": "https://github.com/joebandenburg/libaxolotl-crypto-curve25519",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt": "^0.4.5",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.1.0"
+  }
+}
