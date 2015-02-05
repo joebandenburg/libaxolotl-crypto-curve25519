@@ -1,0 +1,31 @@
+{
+  "name": "axolotl-crypto-curve25519",
+  "version": "1.0.0",
+  "authors": [
+    "Joe Bandenburg <joe@bandenburg.com>"
+  ],
+  "description": "emscripten compiled version of curve25519 and ed25519",
+  "main": "curve25519.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "curve25519",
+    "ed25519",
+    "crypto"
+  ],
+  "license": "LGPLv3",
+  "homepage": "https://github.com/joebandenburg/libaxolotl-crypto-curve25519",
+  "ignore": [
+    "src",
+    "test",
+    ".travis.yml",
+    ".gitignore",
+    ".gitattributes",
+    ".npmignore",
+    "package.json",
+    "Gruntfile.js"
+  ]
+}
