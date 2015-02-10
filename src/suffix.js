@@ -15,6 +15,9 @@
     return {
         generateKeyPair: function(privateKeyBuffer) {
             var privateKey = new Uint8Array(privateKeyBuffer);
+            privateKey[0]  &= 248;
+            privateKey[31] &= 127;
+            privateKey[31] |= 64;
 
             var privateKey_ptr = _allocate(privateKey);
             var publicKey_ptr = Module._malloc(32);

@@ -141,7 +141,7 @@ describe("curve25519", function() {
         });
     });
     describe("sign", function() {
-        it("returns the correct signature", function() {
+        it("returns true for a known valid signature", function() {
             var privateKey = new Uint8Array([
                 0xc0, 0x97, 0x24, 0x84, 0x12,
                 0xe5, 0x8b, 0xf0, 0x5d, 0xf4,
@@ -154,5 +154,13 @@ describe("curve25519", function() {
             var actualSignature = curve25519.sign(privateKey, message);
             assert.ok(curve25519.verifySignature(publicKey, message, actualSignature));
         });
+        for(var i = 0; i < 10; i++) {
+            it("returns true for a random valid signature " + i, function() {
+                var randomBytes = toArrayBuffer(crypto.randomBytes(32));
+                var signingKeyPair = curve25519.generateKeyPair(randomBytes);
+                var signature = curve25519.sign(signingKeyPair.private, message);
+                assert.ok(curve25519.verifySignature(signingKeyPair.public, message, signature));
+            });
+        }
     });
 });
