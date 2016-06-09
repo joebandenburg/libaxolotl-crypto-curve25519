@@ -32,7 +32,7 @@
 
             return {
                 public: publicKey.buffer,
-                private: privateKeyBuffer
+                private: privateKey.buffer
             }
         },
         calculateAgreement: function(publicKey, privateKey) {
